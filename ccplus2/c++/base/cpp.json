@@ -12,14 +12,23 @@
 		],
 		"description": "base"
 	},
-        "Print to console": {
-		"prefix": "base",
+        
+	"base template with test": {
+		"prefix": "mbase",
 		"body": [
 			"#include <iostream>",
 			"using namespace std;",
 			"",
+			"/*",
+			"    @brief",
+			"*/",
+			"",
+			"void test01(){",
+			"",
+			"}",
+			"",
 			"int main(){",
-				"        $2",
+				"        test01();",
 				"        return 0;",
 			"}"
 		],
