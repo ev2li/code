@@ -41,5 +41,13 @@
 			" << endl;"
 		],
 		"description": "endl"
+	},
+
+        "start std": {
+		"prefix": "sc",
+		"body": [
+			"std::cout << "
+		],
+		"description": "std cout"
 	}
 }
