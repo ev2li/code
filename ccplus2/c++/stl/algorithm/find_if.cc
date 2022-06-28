@@ -79,7 +79,8 @@ void test02(){
         auto it = find_if(v.begin(), v.end(),  Greater20());
 
         if(it != v.end()){
-                std::cout << "有" << std::endl;
+                std::cout << "有" << it->m_name << " " << it->m_age <<  std::endl;
+        
         }else{
                 std::cout << "没有" << std::endl;
         }
