@@ -139,4 +139,16 @@
 		],
 		"description": "semicolon"
 	},
+	"new class": {
+		"prefix": "cl",
+		"body": [
+			"class $2{",
+			"public:",
+			"",
+			"private:",
+			"",
+			"};"
+		],
+		"description": "semicolon"
+	},
 }
