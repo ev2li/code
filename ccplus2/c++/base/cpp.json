@@ -68,7 +68,7 @@
 	},
 
 	"if": {
-		"prefix": "ff",
+		"prefix": "fff",
 		"body": [
 			"if($2){",
 			"",
@@ -99,5 +99,44 @@
 			"}"
 		],
 		"description": "ifeifse"
-	}
+	},
+	"brackets": {
+		"prefix": "#a",
+		"body": [
+			"()"
+		],
+		"description": "brackets"
+	},
+
+	"brackets2": {
+		"prefix": "#b",
+		"body": [
+			"($2)"
+		],
+		"description": "brackets2"
+	},
+
+	"arrow": {
+		"prefix": "#c",
+		"body": [
+			"->"
+		],
+		"description": "arrow"
+	},
+
+	"reout": {
+		"prefix": "#d",
+		"body": [
+			" << "
+		],
+		"description": "reout"
+	},
+
+	"semicolon": {
+		"prefix": "#e",
+		"body": [
+			";"
+		],
+		"description": "semicolon"
+	},
 }
