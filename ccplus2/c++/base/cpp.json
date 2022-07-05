@@ -6,13 +6,13 @@
 			"using namespace std;",
 			"",
 			"int main(){",
-				"        $2",
-				"        return 0;",
+				"   $2",
+				"   return 0;",
 			"}"
 		],
 		"description": "base"
 	},
-        
+	
 	"base template with test": {
 		"prefix": "mbase",
 		"body": [
@@ -38,16 +38,66 @@
 	"endl with sep": {
 		"prefix": "ed",
 		"body": [
-			" << endl;"
+			"<< std::endl;"
 		],
 		"description": "endl"
 	},
 
-        "start std": {
+	"start cout": {
 		"prefix": "sc",
 		"body": [
 			"std::cout << "
 		],
-		"description": "std cout"
+		"description": "cout"
+	},
+
+	"start std": {
+		"prefix": "ss",
+		"body": [
+			"std::"
+		],
+		"description": "start std"
+	},
+
+	"include": {
+		"prefix": "ppii",
+		"body": [
+			"#include \"\""
+		],
+		"description": "include"
+	},
+
+	"if": {
+		"prefix": "ff",
+		"body": [
+			"if($2){",
+			"",
+			"}"
+		],
+		"description": "if"
+	},
+	"ifelse": {
+		"prefix": "ffe",
+		"body": [
+			"if($2){",
+			"",
+			"}else{",
+			"",
+			"}"
+		],
+		"description": "ifelse"
+	},
+	"ifeifse": {
+		"prefix": "ffle",
+		"body": [
+			"if($2){",
+			"",
+			"}else if(){",
+			"",
+			"}else{",
+			"",
+			"}"
+		],
+		"description": "ifeifse"
 	}
 }
