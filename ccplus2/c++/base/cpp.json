@@ -6,7 +6,7 @@
 			"using namespace std;",
 			"",
 			"int main(){",
-				"   $2",
+				"   $0",
 				"   return 0;",
 			"}"
 		],
@@ -70,7 +70,7 @@
 	"if": {
 		"prefix": "fff",
 		"body": [
-			"if($2){",
+			"if($0){",
 			"",
 			"}"
 		],
@@ -79,7 +79,7 @@
 	"ifelse": {
 		"prefix": "ffe",
 		"body": [
-			"if($2){",
+			"if($0){",
 			"",
 			"}else{",
 			"",
@@ -90,7 +90,7 @@
 	"ifeifse": {
 		"prefix": "ffle",
 		"body": [
-			"if($2){",
+			"if($0){",
 			"",
 			"}else if(){",
 			"",
@@ -100,55 +100,193 @@
 		],
 		"description": "ifeifse"
 	},
-	"brackets": {
-		"prefix": "#a",
+	"xiaokh": {
+		"prefix": "/a",
 		"body": [
 			"()"
 		],
-		"description": "brackets"
+		"description": "xiaokh"
 	},
 
-	"brackets2": {
-		"prefix": "#b",
+	"xiaokh2": {
+		"prefix": "/b",
 		"body": [
-			"($2)"
+			"($0)"
 		],
-		"description": "brackets2"
+		"description": "xiaokh2"
 	},
 
-	"arrow": {
-		"prefix": "#c",
+	"jiantou": {
+		"prefix": "/c",
 		"body": [
 			"->"
 		],
-		"description": "arrow"
+		"description": "jiantou"
 	},
 
-	"reout": {
-		"prefix": "#d",
+	"zuoyi": {
+		"prefix": "/d",
 		"body": [
 			" << "
 		],
-		"description": "reout"
+		"description": "zuoyi"
 	},
 
-	"semicolon": {
-		"prefix": "#e",
+	"jiankh": {
+		"prefix": "/e",
 		"body": [
-			";"
+			"<$0>"
 		],
-		"description": "semicolon"
+		"description": "jiankh"
+	},
+
+	"syinhao": {
+		"prefix": "/f",
+		"body": [
+			"\"$0\""
+		],
+		"description": "syinhao"
+	},
+
+	"dakh": {
+		"prefix": "/g",
+		"body": [
+			"{",
+			"    $0",
+			"}",
+			""
+		],
+		"description": "dakh"
+	},
+	"zhongkh": {
+		"prefix": "/h",
+		"body": [
+			"[$0]"
+		],
+		"description": "zhongkh"
+	},
+	"equal": {
+		"prefix": "/i",
+		"body": [
+			" = "
+		],
+		"description": "equal"
+	},
+	"maohaos": {
+		"prefix": "/j",
+		"body": [
+			"::",
+		],
+		"description": "maohaos"
+	},
+	"xinhao": {
+		"prefix": "/k",
+		"body": [
+			"*",
+		],
+		"description": "xinhao"
+	},
+	"qudizhi": {
+		"prefix": "/l",
+		"body": [
+			"&",
+		],
+		"description": "qudizhi"
+	},
+	"mxiahx": {
+		"prefix": "/m",
+		"body": [
+			"m_",
+		],
+		"description": "mxiahx"
+	},
+	"equals": {
+		"prefix": "/n",
+		"body": [
+			" == ",
+		],
+		"description": "equals"
+	},
+	"xiahx": {
+		"prefix": "/o",
+		"body": [
+			"_",
+		],
+		"description": "xiahx"
+	},
+	"info": {
+		"prefix": "/info",
+		"body": [
+			"SYLAR_LOG_INFO(g_logger) << "
+		],
+		"description": "info"
+	},
+	"error": {
+		"prefix": "/error",
+		"body": [
+			"SYLAR_LOG_INFO(g_logger) << "
+		],
+		"description": "error"
+	},
+	"warn": {
+		"prefix": "/warn",
+		"body": [
+			"SYLAR_LOG_WARN(g_logger) << "
+		],
+		"description": "warn"
+	},
+	"debug": {
+		"prefix": "/debug",
+		"body": [
+			"SYLAR_LOG_DEBUG(g_logger) << "
+		],
+		"description": "debug"
+	},
+	"root": {
+		"prefix": "/root",
+		"body": [
+			"static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();"
+		],
+		"description": "root"
+	},
+	"system": {
+		"prefix": "/system",
+		"body": [
+			"static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME(\"system\");"
+		],
+		"description": "system"
+	},
+	"ptr": {
+		"prefix": "/ptr",
+		"body": [
+			"typedef std::shared_ptr<$0> ptr;"
+		],
+		"description": "ptr"
+	},
+	"return_true": {
+		"prefix": "/rt",
+		"body": [
+			"return true;"
+		],
+		"description": "return_true"
+	},
+	"return_false": {
+		"prefix": "/rf",
+		"body": [
+			"return false;"
+		],
+		"description": "return_false"
 	},
 	"new class": {
 		"prefix": "cl",
 		"body": [
-			"class $2{",
+			"class $0{",
 			"public:",
 			"",
 			"private:",
 			"",
 			"};"
 		],
-		"description": "semicolon"
+		"description": "new class"
 	},
 }
