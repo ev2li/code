@@ -52,13 +52,19 @@
 	},
 
 	"start std": {
-		"prefix": "ss",
+		"prefix": "/ss",
 		"body": [
 			"std::"
 		],
 		"description": "start std"
 	},
-
+	"string": {
+		"prefix": "/str",
+		"body": [
+			"std::string"
+		],
+		"description": "start std"
+	},
 	"include": {
 		"prefix": "ppii",
 		"body": [
@@ -214,6 +220,41 @@
 		],
 		"description": "xiahx"
 	},
+	"ganth": {
+		"prefix": "/p",
+		"body": [
+			"!",
+		],
+		"description": "ganth"
+	},
+	"binqie": {
+		"prefix": "/q",
+		"body": [
+			" && ",
+		],
+		"description": "binqie"
+	},
+	"huoze": {
+		"prefix": "/r",
+		"body": [
+			" || ",
+		],
+		"description": "huoze"
+	},
+	"cldkh": {
+		"prefix": "/s",
+		"body": [
+			"{ $0 }",
+		],
+		"description": "cldkh"
+	},
+	"budy": {
+		"prefix": "/t",
+		"body": [
+			" != ",
+		],
+		"description": "budy"
+	},
 	"info": {
 		"prefix": "/info",
 		"body": [
@@ -263,6 +304,27 @@
 		],
 		"description": "ptr"
 	},
+	"public": {
+		"prefix": "/pb",
+		"body": [
+			"public"
+		],
+		"description": "pubic"
+	},
+	"protected": {
+		"prefix": "/po",
+		"body": [
+			"protected:"
+		],
+		"description": "protected"
+	},
+	"private": {
+		"prefix": "/pr",
+		"body": [
+			"private:"
+		],
+		"description": "private"
+	},
 	"return_true": {
 		"prefix": "/rt",
 		"body": [
@@ -278,7 +340,7 @@
 		"description": "return_false"
 	},
 	"new class": {
-		"prefix": "cl",
+		"prefix": "/cl",
 		"body": [
 			"class $0{",
 			"public:",
