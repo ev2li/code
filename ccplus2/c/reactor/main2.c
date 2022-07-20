@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <dlfcn.h>	
-
+/**
+ * @brief 
+ * hook的一种
+ */
 // defined in libplugin.so
 typedef void (*pfunc_init)(int *);
 typedef void (*pfunc_stage1)(void);
