@@ -73,3 +73,8 @@ Tab 命令
 - 好处：程序可以和库文件分离，可以分别发版，库文件可以被多处共享
 - 命令规则:libSoTest.so
 - g++ -shared -fPIC SoTest.cpp -o libSoTest.so
+- g++ -lSoTest -L./ test.cpp -o test
+  
+## __<font color="#006666">查看库文件中的函数</font>__
+- readelf -a libSoTest.so |grep func1
+- nm libSoTest.so |grep func1
