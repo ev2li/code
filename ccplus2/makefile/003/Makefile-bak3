@@ -1,0 +1,29 @@
+OBJ=add.o sub.o mutli.o calc.o
+TARGET=calc
+.PHONY:clean show
+
+$(TARGET):$(OBJ)
+	$(CXX) $^ -o $@
+	@rm -rf *.o 
+
+add.o:add.cpp
+	$(CXX) -c  $^ -o $@
+
+sub.o:sub.cpp
+	$(CXX) -c  $^ -o $@
+
+mutli.o:mutli.cpp
+	$(CXX) -c  $^ -o $@
+
+calc.o:calc.cpp
+	$(CXX) -c  $^ -o $@
+
+clean:
+	@$(RM) $(TARGET) *.o
+
+show:
+	echo $(AS)
+	echo $(CC)
+	echo $(CPP)
+	echo $(CXX)
+	echo $(RM)

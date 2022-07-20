@@ -1,0 +1,20 @@
+OBJ=add.o sub.o mutli.o calc.o
+TARGET=calc
+$(TARGET):$(OBJ)
+	g++ $(OBJ) -o $(TARGET)
+	@rm -rf *.o 
+
+add:add.cpp
+	gcc -c add.cpp -o add.o
+
+sub:sub.cpp
+	gcc -c sub.cpp -o sub.o
+
+mutli:mutli.cpp
+	gcc -c mutli.cpp -o mutli.o
+
+calc.o:calc.cpp
+	g++ -c calc.cpp -o calc.o
+
+clean:
+	@rm -rf calc *.o
