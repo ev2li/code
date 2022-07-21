@@ -92,3 +92,7 @@ Tab 命令
 ## __<font color="#006666">静态库</font>__
 - g++ -c aTest.cpp -o aTest.o       
 - ar -r libaTest.a aTest.o
+
+## __<font color="#006666">=与:=</font>__
+- =
+- := 

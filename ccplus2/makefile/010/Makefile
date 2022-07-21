@@ -1,0 +1,17 @@
+#公用Makefile
+SOURCE=$(wildcard ./*.cpp ./*.c)
+OBJ=$(patsubst %.cpp,%.o,$(SOURCE))
+OBJ:=$(patsubst %.c,%.o,$(OBJ))
+
+.PHONY:clean
+
+$(TARGET):$(OBJ)
+	$(CXX) $^ -o $@
+	$(RM) $(OBJ)
+
+clean:
+	@$(RM) $(TARGET)
+
+show:
+	@echo $(SOURCE)
+	@echo $(OBJ)
