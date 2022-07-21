@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include "SoTest.h"
 
@@ -20,4 +21,3 @@ int main(int argc, char const *argv[]){
         t1.func3();
         return 0;
 }
-
