@@ -74,7 +74,21 @@ Tab 命令
 - 命令规则:libSoTest.so
 - g++ -shared -fPIC SoTest.cpp -o libSoTest.so
 - g++ -lSoTest -L./ test.cpp -o test
+- g++ -lSoTest -L../004 main.cpp -o ma
   
 ## __<font color="#006666">查看库文件中的函数</font>__
 - readelf -a libSoTest.so |grep func1
 - nm libSoTest.so |grep func1
+- objdump -DC main > main.txt
+
+## __<font color="#006666">linux默认动态库路径配置文件</font>__
+- /etc/ld.so.conf 
+- /etc/ld.so.conf.d/*.conf
+- /usr/lib
+- /usr/local/lib
+- mac 系统下指定环境亦是 DYLD_LIBARY_PATH=../004 export DYLD_LIBRARY_PATH
+- linux系统下 LD_LIBARY_PATH=../004  export LD_LIBRARY_PATH
+
+## __<font color="#006666">静态库</font>__
+- g++ -c aTest.cpp -o aTest.o       
+- ar -r libaTest.a aTest.o
