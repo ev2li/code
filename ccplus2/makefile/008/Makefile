@@ -1,3 +1,2 @@
-TARGET=c
-OBJ=a.o b.o c.o 
-include ../010/Makefile
+#TARGET:=c
+include ../010/Makefile-head

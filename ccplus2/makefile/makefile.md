@@ -94,5 +94,15 @@ Tab 命令
 - ar -r libaTest.a aTest.o
 
 ## __<font color="#006666">=与:=</font>__
-- =
-- := 
+- Makefile中的指令都是先展开所有变量，再调用指令
+- = 赋值，但是用终值，就是不管调用写在赋值前还是赋值后，调用的都是终值
+- := 也是赋值，但是只受当前行及之前的代码影响，而不受后面的赋值影响
+
+## __<font color="#006666">Makefile调用shell</font>__
+- $(shell )
+
+## __<font color="#006666">Makefile条件判断</font>__
+- ifeq,ifneq 与条件括号之间要有空格，不然会报错
+- 没有elseif的用法，如果要实现elseif就要写嵌套
+- 可以只有if判断没有else
+- 命令行传参 make -f Makefile FLAG=123 如果有Makefile,则可写成make FLAG=456

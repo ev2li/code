@@ -1,17 +1,18 @@
-#公用Makefile
-SOURCE=$(wildcard ./*.cpp ./*.c)
-OBJ=$(patsubst %.cpp,%.o,$(SOURCE))
-OBJ:=$(patsubst %.c,%.o,$(OBJ))
+# -C 指定工作目录
 
-.PHONY:clean
+DIR=../008 ../009#
+all:$(DIR)
 
-$(TARGET):$(OBJ)
-	$(CXX) $^ -o $@
-	$(RM) $(OBJ)
+$(DIR):
+	$(MAKE) -C $@
+
+all-v1:
+	$(MAKE) -C ../008
+	$(MAKE) -C ../009
+
+.PHONY:clean ../008 ../009
 
 clean:
-	@$(RM) $(TARGET)
-
-show:
-	@echo $(SOURCE)
-	@echo $(OBJ)
+	$(shell for dir in $(DIR); do make -C $$dir clean;done) 
+	
+#$$表示展开shell中的变量
