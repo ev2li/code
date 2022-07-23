@@ -106,3 +106,24 @@ Tab 命令
 - 没有elseif的用法，如果要实现elseif就要写嵌套
 - 可以只有if判断没有else
 - 命令行传参 make -f Makefile FLAG=123 如果有Makefile,则可写成make FLAG=456
+
+## __<font color="#006666">Makefile中的循环</font>__
+- $(foreach v, $(TARGET), $v.txt)
+- 只支持GUN make其它平台make可以用shell中的循环来实现
+
+## __<font color="#006666">Makefile中的函数</font>__
+- define FUNC1 endef(定义和实现)参数是$(0)....$(5)
+- $(call FUNC1 abc,efd)(调用)
+- 没有返回值
+- $(0)是函数名
+
+## __<font color="#006666">make-install</font>__
+- 1.make:将源文件编译成二进制可执行文件(包括各种库文件)
+- 2.创建目录，将可执行文件拷贝到指定目录(安装目录)
+- 3.加全局可执行路径
+- 4.全局的启停脚本
+- 5.重置编辑环境，删除无关文件
+  
+## __<font color="#006666">Make file 换行符（反斜杠\）的用法</font>__
+- 末尾加"\"
+- 第二行前不得为tab键，空格即可

@@ -1,0 +1,9 @@
+# 自定义函数，不是真正的函数，没有返回值
+
+define FUNC1
+	return 123
+endef
+
+
+default:
+	echo $(call FUNC1)
