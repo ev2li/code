@@ -1,0 +1,8 @@
+ls -l ./ | awk '{print $9}' > ./files0.txt
+cat  ./files0.txt | while read line
+do
+	if echo "$line" | grep -q -E '\.c$';then
+		rm -rf ${line%.*}
+	fi
+done
+rm -rf ./files0.txt
