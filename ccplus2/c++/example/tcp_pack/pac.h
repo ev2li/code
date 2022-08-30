@@ -19,8 +19,8 @@ typedef unsigned char byte;
 
 typedef struct _PAC_DESC{
     int length; //包的长度
-    int loop;
-    byte* buffer;
+    int loop; //偏移量
+    byte* buffer; //包的数据
 } pac_desc;
  
 //包队列（存放已经拆开的包）
