@@ -1,0 +1,61 @@
+int array[arraySize]; //在Stack上定义长度为arraySize的整型数组
+int *array = new int[arraySize]; //在Heap上定义长度为arraySize的整型数组[c++中]
+c语言中是使用malloc
+注意，在旧编译器中，不能在Stack上定义一个长度不确定的数组，即只能定义如下 int array[10];
+新编译器中没有上述的限制，但是如果数组长度不定，则不能初始化数组
+int array[arraySize] = {0}; //把不定长度的数组初始化为零，编译报错
+
+Stack：主要是由os自动管理内存空间，当进入一个函数，os会为该函数中的局部变量分配储存空间，
+事实是系统会分配一个内存块，叠加在当前的stack上，并且利用指针指向前一个内存块的地址
+函数的局部变量就存储在当前的内存块上，当该函数返回时，系统弹出内存块，并且根据指针回到前
+一个内存块，所以Stack总是以后进先出(FIFO)的方式工作
+
+Heap：是用来存储动态分配变量的空间，对于heap而言，并没有像stack那样后进先出的规则，程序员
+可以选择随时分配或者回收内存，这意味着需要程序员自己用命令回收内存，否则会产生内存泄露(memory leak)
+
+c/c++中，程序员需要调用free/delete来释放动态分配的内存
+
+1.在Stack上创建:
+    int array[M][N];
+    传递给子函数:
+    void func(int arr[M][N]){//M可能省略，但N必须存在，以便编译器确定移到内存的间距}
+2.在Heap上创建:
+    int **array = new int*[M] //或者(int**)malloc(M * sizeof(int*));
+    for(int i = 0; i < M; i++)
+        array[i] = new int[N]; //或者 (int*)malloc(N * sizeof(int));
+
+    传递给子函数:
+    void func(int **arr, int M, int N){}
+3.使用完后需要释放内存:
+    for(int i = 0; i < M; i++){
+        delete[] array[i];
+    }
+    delete[] array;
+
+vector可以使用[]运算符直接访问元素的
+size_type size() const; //Returns the number of elements in the vector
+void push_back(const value_type& val);
+void pop_back();
+iterator earse(iterator first, iterator last); //Removes from the vector either single element(position) or a range of elements([first, last])
+for(vector<int>::iterator it = v.begin(); it!= v.end();){
+    if(condition){
+        it = v.erase(it);
+    }else{
+        ++it;
+    }
+}
+
+HashTable:
+    1、主要用于基于"key"的查找，存储的基本元素是key-value的pair,逻辑上，数组可以作为HashTable
+    的一个特例
+    2、hash碰撞
+        1.开放地址法
+        2.拉链法
+
+HashTable
+HashSet
+HastMap
+unordered_map
+
+c语言中，字符串指的是一个以'\0'结尾的char数组，关于字符串的函数通常需要传入一个字符型指针
+在c++中,String是一个类，并且可以通过调用类函数实现判断字符串长度，字串等操作
