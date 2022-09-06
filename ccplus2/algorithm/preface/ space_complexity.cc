@@ -1,8 +1,7 @@
 #include <iostream>
 #include <sys/time.h>
 #include <map>
-
-using namespace std;
+#include <string>
 
 //获取毫秒数
 unsigned long long getSecond();
